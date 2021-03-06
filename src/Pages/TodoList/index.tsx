@@ -27,9 +27,7 @@ const TodoList = (): JSX.Element => {
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
     return (
         <div>
-            <Row justify="center">
-                <Col span={4}><Header /></Col>
-            </Row>
+            <Header />
             <List />
         </div>
     );
