@@ -2,7 +2,7 @@
 * @file type.ts
 * @date 2021-03-06
 * @author zhoubin
-* @lastModify  2021-03-06
+* @lastModify  2021-03-09
 */
 
 export enum ACTION_TYPE { ADD_TODO = 'ADD_TODO', ADD_TODO_ASYNC = 'ADD_TODO_ASYNC', CHANGE_TODO = 'CHANGE_TODO', CHANGE_TODO_ASYNC = 'CHANGE_TODO_ASYNC', DELETE_TODO = 'DELETE_TODO', DELETE_TODO_ASYNC = 'DELETE_TODO_ASYNC' }

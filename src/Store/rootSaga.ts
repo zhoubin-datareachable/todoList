@@ -2,16 +2,16 @@
  * @file root saga file
  * @date 2020-09-22
  * @author Frank
- * @lastModify Frank 2020-09-22
+ * @lastModify Frank 2021-03-09
  */
 import { all } from 'redux-saga/effects';
-import sagas from './Todolist/sagas'
+import todoListSagas from './Todolist/sagas'
 
 export default function* rootSaga(): Generator {
     try {
         yield all([
             // this is where the saga combine into the rootSaga
-            ...sagas
+            ...todoListSagas
         ]);
     } catch (err) {
         // This is where error monitoring should go
