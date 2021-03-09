@@ -9,7 +9,7 @@
 import React, { useState } from 'react';
 import { Row } from 'antd';
 import { useDispatch } from 'react-redux';
-import * as actions from "../../../../Store/Todolist/actions";
+import * as types from "../../../../Store/Todolist/types"
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
@@ -52,7 +52,7 @@ const Item: React.FC<todoProps> = ({ todo }): JSX.Element => {
      */
     const selectTodo = () => {
         todo.done = !todo.done;
-        dispatch(actions.changeTodoAction(todo))
+        dispatch({ type: types.ACTION_TYPE.CHANGE_TODO_ASYNC, todoItem: todo })
     }
 
     /**
@@ -61,7 +61,7 @@ const Item: React.FC<todoProps> = ({ todo }): JSX.Element => {
      */
     const changeContent = (e: React.ChangeEvent<HTMLInputElement>) => {
         todo.content = e.target.value;
-        dispatch(actions.changeTodoAction(todo))
+        dispatch({ type: types.ACTION_TYPE.CHANGE_TODO_ASYNC, todoItem: todo })
     }
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
     return (

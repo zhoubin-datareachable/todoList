@@ -7,7 +7,6 @@
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
 import React from 'react';
-import { Col, Row } from 'antd';
 import Header from './Header'
 import List from './List'
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */

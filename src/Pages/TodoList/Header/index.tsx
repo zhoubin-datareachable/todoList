@@ -9,7 +9,8 @@
 import React, { useRef } from 'react';
 import { Row } from 'antd';
 import { useDispatch } from 'react-redux';
-import * as actions from "../../../Store/Todolist/actions";
+import * as types from "../../../Store/Todolist/types"
+
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
@@ -50,7 +51,8 @@ const Header = (): JSX.Element => {
              *
              */
             const done = false;
-            dispatch(actions.addTodoAction({ id, content, done }));
+
+            dispatch({ type: types.ACTION_TYPE.ADD_TODO_ASYNC, todoItem: { id, content, done } })
 
         }
 
@@ -60,7 +62,7 @@ const Header = (): JSX.Element => {
         <Row>
             <input ref={inputEl} type="text" />
             <button onClick={addTodo}>添加</button>
-            <button onClick={() => dispatch(actions.deleteTodoAction())}>删除</button>
+            <button onClick={() => dispatch({ type: types.ACTION_TYPE.DELETE_TODO_ASYNC })}>删除</button>
         </Row>
     );
 };

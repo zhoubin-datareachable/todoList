@@ -5,7 +5,7 @@
 * @lastModify  2021-03-06
 */
 
-export enum ACTION_TYPE { ADD_TODO = 'ADD_TODO', CHANGE_TODO = 'CHANGE_TODO', DELETE_TODO = 'DELETE_TODO' }
+export enum ACTION_TYPE { ADD_TODO = 'ADD_TODO', ADD_TODO_ASYNC = 'ADD_TODO_ASYNC', CHANGE_TODO = 'CHANGE_TODO', CHANGE_TODO_ASYNC = 'CHANGE_TODO_ASYNC', DELETE_TODO = 'DELETE_TODO', DELETE_TODO_ASYNC = 'DELETE_TODO_ASYNC' }
 
 /**
  * this interface describes each item of data in todolist
@@ -32,6 +32,8 @@ interface AddTodoAction {
     }
 }
 
+
+
 /**
  * This action will change todoItem
  * @param {TodoItemType} payload.todoItem will change todoItem
@@ -43,6 +45,7 @@ interface changeTodoAction {
     }
 }
 
+
 /**
  * This action will delete todoItem
  * @param {TodoItemType} payload.todoItem will delete todoItem
@@ -52,6 +55,7 @@ interface deleteTodoAction {
     payload: {
     }
 }
+
 
 export type TodoListActionTypes = AddTodoAction | changeTodoAction | deleteTodoAction;
 
