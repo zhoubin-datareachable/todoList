@@ -7,8 +7,8 @@
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
 import React from 'react';
-import Header from './Header'
-import List from './List'
+import Header from './Components/Header'
+import List from './Components/List'
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
