@@ -22,5 +22,5 @@ jobs:
           with:
             node-version: '10.x'
         - run: | 
-              node -v python -v java -v
+            java -v
        
